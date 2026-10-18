@@ -23,10 +23,14 @@ Local verification on 18 October 2026 (Asia/Dubai):
 Tests use synthetic data. Unit tests mock the HTTP inference boundary; they are
 not evidence of AMD execution, clinical effectiveness, or production readiness.
 
+- **Linux container verified:** Docker build succeeded. The running container
+  passed health, draft creation, approval, pharmacy, and billing checks. Its saved
+  approved workflow and findings were restored after a container restart.
+- **Public source published:** https://github.com/Promizir/clearpath-discharge
+
 Still pending:
 
-- Deployment container execution (Docker Desktop was not running locally).
-- Public GitHub repository, hosted app, video-link upload, and final submission.
+- Hosted app, video-link upload, and final submission.
 
 Reproduce unit tests with `python -m unittest discover -s tests -v` and browser
 checks with `python scripts/qa_dashboard.py --url http://127.0.0.1:8000`.

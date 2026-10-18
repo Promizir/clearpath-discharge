@@ -68,7 +68,7 @@ A browser sends validated requests to a FastAPI application. The application inv
 - [ ] Select **Track 2 — Health and Wellbeing** in the platform.
 - [x] Exercise the AMD API summary path and record the model and synthetic output.
 - [ ] Enter title, short/long descriptions, and technology tags.
-- [ ] Add the required public GitHub repository URL.
+- [x] Public GitHub repository: https://github.com/Promizir/clearpath-discharge
 - [ ] Add the demo application platform and live application URL; local run instructions alone do not fill those fields. [Official event submission list](https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-iii)
 - [ ] Upload `cover.png` (or another supported format).
 - [ ] Upload `ClearPath-pitch.pdf`, or the editable PPTX if the platform prefers it.

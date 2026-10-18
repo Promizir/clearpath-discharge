@@ -3,13 +3,14 @@ services:
     name: clearpath-discharge
     runtime: docker
     plan: free
+    autoDeployTrigger: off
     healthCheckPath: /health
     envVars:
       - key: AI_PROVIDER
-        value: MOCK
+        value: AMD
       - key: AMD_API_KEY
         sync: false
       - key: AMD_BASE_URL
-        sync: false
+        value: https://developer.amd.com.cn/radeon/api/v1
       - key: AMD_MODEL
-        sync: false
+        value: DeepSeek-V4-Flash

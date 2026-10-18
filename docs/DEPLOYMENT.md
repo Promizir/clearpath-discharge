@@ -28,8 +28,9 @@ is ephemeral across Space restarts; durable hosting needs configured storage.
 
 ## Render alternative
 
-Create a Blueprint from the public GitHub repository and `render.yaml`. Supply
-the AMD key/base/model, then set `AI_PROVIDER=AMD`. The blueprint uses Docker and
+Open [Deploy to Render](https://render.com/deploy?repo=https://github.com/Promizir/clearpath-discharge)
+and create a Blueprint from the public repository. Supply the private AMD key;
+the model, endpoint, and `AI_PROVIDER=AMD` are preconfigured. The blueprint uses Docker and
 the `/health` endpoint. Check current plan, storage, and sleep behavior before
 judging. [Render Blueprint reference](https://render.com/docs/blueprint-spec)
 
@@ -42,6 +43,8 @@ docker run --rm -p 7860:7860 --env-file .env clearpath-discharge
 
 Open `http://localhost:7860`. This command uses disposable container storage.
 For durability, mount a writable volume and set `DATABASE_PATH` onto that volume.
+Docker's `--env-file` expects unquoted values; dotenv's quoted syntax should not
+be copied unchanged into a Docker environment file.
 
 ## Final checks
 

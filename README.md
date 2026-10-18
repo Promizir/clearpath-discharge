@@ -128,6 +128,11 @@ The Dockerfile serves the full app on port 7860 (or `$PORT`) using one worker.
 The README metadata supports Hugging Face Docker Spaces; `render.yaml` supports
 Render. See [deployment steps](docs/DEPLOYMENT.md).
 
+[Deploy this repository to Render](https://render.com/deploy?repo=https://github.com/Promizir/clearpath-discharge)
+and enter your private `AMD_API_KEY` when prompted. The blueprint preconfigures
+the verified endpoint/model and selects the free service plan. Review the
+deployment settings in your own account before creating it.
+
 SQLite survives process restarts while its filesystem remains intact. Cloud
 container replacement needs attached durable storage; ephemeral hosting can
 lose snapshots. Set `DATABASE_PATH` to a writable volume path when configured.
