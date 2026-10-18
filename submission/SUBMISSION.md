@@ -1,5 +1,22 @@
 # ClearPath — Discharge Coordination
 
+## Final submission links
+
+| Form field | Value |
+| --- | --- |
+| Working prototype / live app | https://clearpath-discharge.onrender.com |
+| Application platform | Render |
+| Public source repository | https://github.com/Promizir/clearpath-discharge |
+| Demo video | https://github.com/Promizir/clearpath-discharge/releases/download/v0.1.0/ClearPath-demo-AMD.mp4 |
+| Pitch PDF | https://github.com/Promizir/clearpath-discharge/releases/download/v0.1.0/ClearPath-pitch.pdf |
+| Cover PNG | https://github.com/Promizir/clearpath-discharge/releases/download/v0.1.0/cover.png |
+| All downloadable assets | https://github.com/Promizir/clearpath-discharge/releases/tag/v0.1.0 |
+
+The hosted app passed the AMD-backed browser workflow and mobile checks.
+The video link downloads the MP4. If the submission form requires a particular
+video provider or a file upload, upload that MP4 there and use its resulting URL.
+Final form submission is still the submitter's action; no confirmation has been received.
+
 Copy-ready submission content for AMD Developer Hackathon: ACT III. The linked platform guide specifies a title up to 50 characters, summary up to 255 characters, and long description of at least 100 words. The content below fits those limits. [Official submission guide](https://lablab.ai/ai-articles/hackathon-guidelines)
 
 ## Project title
@@ -93,4 +110,4 @@ A browser sends validated requests to a FastAPI application. The application inv
 - `VERIFICATION.md`: completed checks and outstanding verification.
 - `build_assets.py`: reproducible local generator for the visual assets.
 
-The local AMD demo video and live API verification are complete. Video-link upload, platform challenge selection, external prototype/source links, and final platform submission remain outstanding. A local file is not an uploaded video link.
+The public app, source repository, uploaded video, pitch, cover, and verification are complete. Paste the links and copy below into the hackathon form, select the challenge, complete any team fields, and submit. Keep the platform's confirmation; publishing these assets does not submit the hackathon form.

@@ -27,10 +27,17 @@ not evidence of AMD execution, clinical effectiveness, or production readiness.
   passed health, draft creation, approval, pharmacy, and billing checks. Its saved
   approved workflow and findings were restored after a container restart.
 - **Public source published:** https://github.com/Promizir/clearpath-discharge
+- **Public app verified:** https://clearpath-discharge.onrender.com. Public config
+  reports AMD / DeepSeek-V4-Flash configured. Chrome completed real AMD draft
+  generation, approval, both checks, review-packet download, reload restoration,
+  revision invalidation, and 390-pixel mobile layout without JavaScript errors.
+- **Release uploads verified:** MP4, PDF, PPTX, cover, source ZIP, and presentation
+  ZIP report uploaded. Anonymous HTTP checks returned 200 for the repository,
+  release page, and final video.
 
 Still pending:
 
-- Hosted app, video-link upload, and final submission.
+- Final hackathon form submission and its confirmation.
 
 Reproduce unit tests with `python -m unittest discover -s tests -v` and browser
 checks with `python scripts/qa_dashboard.py --url http://127.0.0.1:8000`.

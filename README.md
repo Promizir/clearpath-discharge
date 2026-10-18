@@ -13,6 +13,13 @@ A shared discharge workspace for clinical drafts, human review, and concurrent
 pharmacy and billing checks. Built for AMD Developer Hackathon: ACT III,
 Track 2 — Health and Wellbeing.
 
+**[Try the live app](https://clearpath-discharge.onrender.com)** ·
+**[Watch/download the AMD demo](https://github.com/Promizir/clearpath-discharge/releases/download/v0.1.0/ClearPath-demo-AMD.mp4)** ·
+**[Submission assets](https://github.com/Promizir/clearpath-discharge/releases/tag/v0.1.0)**
+
+The public Render deployment passed the full AMD-backed browser workflow,
+report download, reload restoration, edit invalidation, and mobile checks.
+
 ![Running dashboard](submission/screenshots/02-review-findings.png)
 
 ## Working prototype
