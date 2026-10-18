@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f5f6f3"/>
+<rect x="96" y="92" width="44" height="8" rx="4" fill="#087f72"/>
+<text x="160" y="109" fill="#087f72" font-family="Arial,sans-serif" font-size="26" font-weight="bold" letter-spacing="3">CLEARPATH</text>
+<text x="96" y="310" fill="#152c3b" font-family="Georgia,serif" font-size="104">A clearer path</text>
+<text x="96" y="430" fill="#152c3b" font-family="Georgia,serif" font-size="104">to discharge.</text>
+<text x="100" y="510" fill="#52646b" font-family="Arial,sans-serif" font-size="29">Draft. Review. Coordinate.</text>
+<text x="100" y="565" fill="#52646b" font-family="Arial,sans-serif" font-size="25">One workflow. Every approval current.</text>
+<rect x="1050" y="170" width="430" height="530" rx="28" fill="#152c3b"/>
+<text x="1090" y="227" fill="#a9d9ce" font-family="Arial,sans-serif" font-size="18" letter-spacing="2">DISCHARGE WORKFLOW</text>
+<path d="M1113 294 V600" stroke="#4c7778" stroke-width="3" fill="none"/>
+<g font-family="Arial,sans-serif" font-size="27" fill="#ffffff">
+<circle cx="1113" cy="300" r="13" fill="#a9d9ce"/><text x="1147" y="310">Draft prepared</text>
+<circle cx="1113" cy="399" r="13" fill="#a9d9ce"/><text x="1147" y="409">Revision approved</text>
+<circle cx="1113" cy="498" r="13" fill="#a9d9ce"/><text x="1147" y="508">Checks complete</text>
+<circle cx="1113" cy="597" r="13" fill="#d59b41"/><text x="1147" y="607">Human review</text>
+</g>
+<path d="M96 776 H1504" stroke="#d7ded9"/>
+<text x="100" y="826" fill="#52646b" font-family="Arial,sans-serif" font-size="21">Discharge Coordination Prototype</text>
+<text x="1500" y="826" text-anchor="end" fill="#52646b" font-family="Arial,sans-serif" font-size="21">Synthetic data · Human approval</text>
+</svg>

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: clearpath-discharge
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: AI_PROVIDER
+        value: MOCK
+      - key: AMD_API_KEY
+        sync: false
+      - key: AMD_BASE_URL
+        sync: false
+      - key: AMD_MODEL
+        sync: false

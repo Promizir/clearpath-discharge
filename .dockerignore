@@ -1,0 +1,13 @@
+.git
+.venv
+.env
+.env.*
+runtime
+__pycache__
+*.egg-info
+.browser-cache
+.tools
+Microsoft
+submission
+tests
+scripts

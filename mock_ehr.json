@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "patient_id": "PT-402",
+  "patient": {
+    "name": "John Doe",
+    "age": 34,
+    "bed": "Ward 4 - Bed 402",
+    "allergies": [
+      {
+        "substance": "Penicillin",
+        "criticality": "HIGH",
+        "reaction": "Anaphylaxis"
+      }
+    ]
+  },
+  "encounter": {
+    "primary_diagnosis": "Acute Appendicitis",
+    "procedure_performed": "Laparoscopic Appendectomy"
+  },
+  "billing": {
+    "used_consumables": [
+      {"item_id": "HEMOSTATIC_GAUZE", "quantity": 3},
+      {"item_id": "SKIN_STAPLER", "quantity": 1},
+      {"item_id": "IV_CANNULA", "quantity": 2}
+    ],
+    "billed_consumables": [
+      {"item_id": "HEMOSTATIC_GAUZE", "quantity": 1},
+      {"item_id": "IV_CANNULA", "quantity": 2}
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-10-18T02:42:11.329483+00:00",
+  "scope": "One real configured-endpoint response using synthetic data; not a clinical evaluation or hardware attestation.",
+  "draft": {
+    "patient_id": "PT-402",
+    "patient_name": "John Doe",
+    "encounter": {
+      "primary_diagnosis": "Acute Appendicitis",
+      "procedure_performed": "Laparoscopic Appendectomy"
+    },
+    "doctor_note": "Prepare John Doe's discharge draft after laparoscopic appendectomy. The clinician reports a clean surgical wound and requests follow-up in 7 days. Review proposed medication against documented allergies.",
+    "proposed_medications": [
+      {
+        "name": "Amoxicillin"
+      }
+    ],
+    "generation_mode": "AMD",
+    "clinical_summary": "John Doe underwent a laparoscopic appendectomy for acute appendicitis. The clinician reports a clean surgical wound and requests a follow-up in 7 days. A proposed medication of amoxicillin is listed, but this is flagged for allergy review because the patient has a documented high-criticality penicillin allergy with anaphylaxis.",
+    "review_notes": [
+      "Proposed amoxicillin is contraindicated given documented penicillin allergy (anaphylaxis); verify alternative antibiotic choice.",
+      "No discharge date, vital signs, or pain management plan documented.",
+      "No pathology report or final operative details (e.g., perforation status) provided.",
+      "Follow-up appointment details (date, location, provider) are not specified.",
+      "Wound care instructions and activity restrictions are not documented."
+    ],
+    "model_name": "DeepSeek-V4-Flash",
+    "inference_ms": 60814,
+    "status": "AWAITING_DOCTOR_REVIEW"
+  }
+}

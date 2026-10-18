@@ -1,0 +1,7 @@
+# Direct runtime versions verified locally; transitive dependencies resolve at install.
+fastapi==0.143.3
+fastmcp==2.14.7
+pydantic==2.14.1
+uvicorn==0.54.0
+httpx==0.28.1
+python-dotenv==1.2.4

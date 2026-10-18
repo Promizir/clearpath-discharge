@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#152c3b">
+  <title>ClearPath · Discharge workspace</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="ClearPath home"><span class="brand-mark">↗</span> ClearPath<span class="brand-dot">.</span></a>
+  <div class="workspace-label">CARE OPERATIONS</div>
+  <nav aria-label="Main navigation">
+    <button class="nav-item active" data-view="workspace"><span>▦</span> Discharge workspace</button>
+    <button class="nav-item" data-view="activity"><span>◷</span> Activity & evidence</button>
+    <button class="nav-item" data-view="about"><span>◎</span> About this prototype</button>
+  </nav>
+  <div class="side-card"><span class="tiny-label">BUILT AROUND PEOPLE</span><p>AI helps prepare.<br>People decide.</p><div class="mini-line"></div><small>Every draft needs review.<br>Every finding stays visible.</small></div>
+  <div class="side-footer"><span class="avatar">DC</span><div><strong>Discharge coordinator</strong><small>Demonstration workspace</small></div></div>
+</aside>
+<main>
+  <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> Discharge coordination</div><div class="top-actions"><span class="badge neutral">Synthetic patient data</span><a href="/docs" target="_blank" rel="noopener">API docs ↗</a></div></header>
+  <section class="view" id="workspace-view">
+    <div class="page-heading"><div><div class="eyebrow">FROM ROUNDS TO REVIEW</div><h1>A clearer path <em>home.</em></h1><p>One shared view of the discharge draft, checks, and decisions.</p></div><button class="button secondary" id="new-case">＋ New workflow</button></div>
+    <section class="patient-strip" aria-label="Patient overview"><div class="patient-identity"><span class="patient-avatar">JD</span><div><h2>John Doe <span class="badge neutral">Demo patient</span></h2><p>PT-402 <span>·</span> 34 years <span>·</span> Ward 4 / Bed 402</p></div></div><div class="patient-fact"><small>ENCOUNTER</small><strong>Laparoscopic appendectomy</strong><span>Acute appendicitis</span></div><div class="allergy-alert"><span>!</span><div><strong>Penicillin allergy</strong><small>Documented reaction: anaphylaxis</small></div></div></section>
+    <div id="notice" role="status" aria-live="polite" hidden></div>
+    <div class="workspace-grid">
+      <section class="panel input-panel"><div class="panel-heading"><span class="step-number">01</span><div><h2>Clinical input</h2><p>Start with the doctor’s note.</p></div></div>
+        <div class="input-tabs"><span class="selected">Text note</span><span class="input-mode" id="input-mode">Structured demo</span></div>
+        <label for="doctor-note">Doctor’s handoff note</label><textarea id="doctor-note" rows="7">Please prepare John Doe’s discharge draft following laparoscopic appendectomy. Surgical wound is clean. Arrange follow-up in the surgical clinic in 7 days. Review the proposed discharge medication against the documented allergies.</textarea>
+        <div class="field-heading"><label for="medications">Proposed medicines</label><span>One per line</span></div><textarea id="medications" rows="2">Amoxicillin</textarea><p class="field-hint">Names only in this prototype. Proposed medicines remain subject to clinician review.</p>
+        <button class="button primary full" id="create-draft">Prepare discharge draft <span>↗</span></button>
+        <button class="text-button" id="load-example">↻ Restore example inputs</button>
+        <div class="source-note"><span>◈</span><p><strong>Connected to a synthetic record</strong><br>Diagnosis, procedure, allergy and consumable records are retrieved through MCP tools.</p></div>
+      </section>
+      <section class="panel draft-panel"><div class="panel-heading"><span class="step-number">02</span><div><h2>Draft & doctor review</h2><p>Review the exact revision before approving.</p></div><span class="badge neutral" id="revision-badge">No draft</span></div>
+        <div id="draft-empty" class="empty-state"><div class="document-symbol">≡</div><h3>Your discharge draft starts here</h3><p>Prepare a draft from the note and patient record. You can review and edit it before starting the checks.</p><div class="empty-rule"></div><span>Source facts → Draft → Human review</span></div>
+        <div id="draft-content" hidden>
+          <div class="draft-meta"><span id="generation-badge" class="badge neutral">MOCK</span><span id="approval-badge" class="badge amber">Awaiting doctor review</span></div>
+          <div class="draft-title"><small>DISCHARGE REVIEW DRAFT</small><h3>John Doe</h3><p id="draft-encounter"></p></div>
+          <div id="ai-summary-section" hidden><div class="section-label">AI-prepared summary · review required</div><p id="ai-summary" class="summary-copy"></p><ul id="ai-review-notes" class="field-hint"></ul><p id="model-evidence" class="field-hint"></p></div>
+          <label for="review-note">Clinician note</label><textarea id="review-note" rows="6"></textarea>
+          <div class="section-label">Proposed medicines</div><div id="draft-medicines" class="medicine-chips"></div>
+          <div class="draft-actions"><button class="button secondary" id="save-note">Save note edit</button><button class="button primary" id="approve-draft">Approve revision <span>✓</span></button></div>
+          <p class="field-hint">Approval is simulated for this demo. Editing creates a new revision and invalidates previous checks.</p>
+        </div>
+      </section>
+      <section class="panel checks-panel"><div class="panel-heading"><span class="step-number">03</span><div><h2>Independent checks</h2><p>Run together. Review every finding.</p></div></div>
+        <div class="workflow-visual"><div id="flow-draft" class="flow-node"><span>▤</span><div>Doctor review<small>Approval required</small></div><i></i></div><div class="flow-branches"><span></span><span></span></div><div class="flow-pair"><div id="flow-pharmacy" class="flow-node compact"><span>✚</span><div>Pharmacy<small>Waiting</small></div></div><div id="flow-billing" class="flow-node compact"><span>▥</span><div>Billing<small>Waiting</small></div></div></div></div>
+        <button class="button dark full" id="run-checks" disabled>Run pharmacy + billing <span>→</span></button>
+        <div class="checks-divider"></div><div id="findings"><div class="waiting-findings"><span>◎</span><p>Findings will appear here after the approved draft is checked.</p></div></div>
+        <button class="button secondary full" id="download-report" disabled>Download review packet <span>↓</span></button><p class="field-hint">A review packet is not discharge authorization.</p>
+      </section>
+    </div>
+    <section class="bottom-bar"><div><span class="connection-dot"></span><strong id="storage-label">Persistent workflow storage</strong><span id="workflow-label">Create a workflow to begin</span></div><button class="text-button" id="copy-id" disabled>Copy workflow ID</button></section>
+  </section>
+  <section class="view secondary-view" id="activity-view" hidden><div class="eyebrow">A TRACEABLE PROCESS</div><h1>Activity & <em>evidence.</em></h1><p class="lead">Current workflow facts, persisted with every state change.</p><div class="panel activity-panel"><h2>Workflow snapshot</h2><p>This is the stored state for the selected workflow. It is a latest snapshot, not a complete audit history.</p><pre id="snapshot-json">No workflow selected.</pre></div></section>
+  <section class="view secondary-view" id="about-view" hidden><div class="eyebrow">HEALTH AND WELLBEING</div><h1>Built for the <em>handoff.</em></h1><p class="lead">ClearPath helps discharge coordinators bring clinical notes, medication review and consumable reconciliation into one reviewable process.</p><div class="about-grid"><article class="panel"><h2>The problem</h2><p>A discharge crosses several teams. Notes, allergy information and billing records can be scattered, leaving staff to repeat checks and chase missing details.</p></article><article class="panel"><h2>The approach</h2><p>Prepare a draft from source records, require explicit review, then run independent checks concurrently. Keep findings visible and preserve state across restarts.</p></article><article class="panel"><h2>What this demo proves</h2><p>Schema validation, MCP tool calls, revision-aware approval, concurrent execution, structured findings, and SQLite persistence using a synthetic case.</p></article><article class="panel"><h2>What it does not prove</h2><p>Clinical safety, insurance approval, or production readiness. The pharmacy rule is deliberately narrow. Human reviewers remain responsible for clinical decisions.</p></article></div><p class="field-hint">FastAPI · Python asyncio · Pydantic · MCP · SQLite</p></section>
+  <footer>ClearPath <span>Human-reviewed discharge coordination</span><span>Prototype · Synthetic data only</span></footer>
+</main>
+</body></html>

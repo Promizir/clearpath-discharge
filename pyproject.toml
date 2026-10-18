@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "discharge-learning-app"
+version = "0.1.0"
+description = "A synthetic hospital discharge workflow built one lesson at a time."
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.13.3,<3",
+    "fastmcp>=2.14,<3",
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.35,<1",
+    "httpx>=0.28,<1",
+    "python-dotenv>=1.1,<2",
+]
+
+[tool.setuptools]
+py-modules = ["schemas", "mcp_server", "agents", "workflow", "main", "storage", "config", "providers"]
